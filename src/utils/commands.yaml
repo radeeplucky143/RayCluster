@@ -1,0 +1,49 @@
+node_creation:
+  - tailscale
+  - up
+  - --authkey
+  - auth_key
+  - --login-server
+  - http://<headscale-ip>:8080
+
+build_ray_head:
+  - docker
+  - build
+  - f
+  - Dockerfile.head
+  - t
+  - ray-head
+  - .
+
+running_ray_head:
+  - docker
+  - run
+  - --privileged
+  - -d
+  - --name
+  - ray-head
+  - -p
+  - 6379:6379
+  - -p
+  - 8000:8000
+  - -p
+  - 8265:8265
+  - ray-head
+
+build_ray_worker:
+  - docker
+  - build
+  - -f
+  - Dockerfile.worker
+  - -t
+  - ray-worker
+  - .
+
+run_ray_worker:
+  - docker
+  - run
+  - --privileged
+  - -d
+  - --name
+  - ray-worker
+  - ray-worker
