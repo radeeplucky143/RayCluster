@@ -1,5 +1,5 @@
 import yaml
-from logger_util import Logger
+from src.utils.logger_util import Logger
 
 class Yaml:
 
