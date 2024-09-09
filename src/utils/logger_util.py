@@ -10,7 +10,7 @@ class Logger:
         self.date_format = '%Y-%m-%d %H:%M:%S'
         self.formatter = '%(asctime)s - %(levelname)s - %(filename)s - %(message)s'
         self.now = datetime.datetime.now()
-        self.log_file_name = f"ray_cluster_{self.now.strftime('%Y-%m-%d_%H')}.log"
+        self.log_file_name = f"../logs/ray_cluster_{self.now.strftime('%Y-%m-%d_%H')}.log"
 
 
     def create_log_file(self):
