@@ -26,7 +26,7 @@ async def create_node(node_name: str):
 
     except Exception as e:
         logger.error(f'Exception: {e}')
-        return {"status_code":500, "message":f"{e}")
+        return {"status_code":500, "message":f"{e}"}
 
 
 @router.post("/start_ray_cluster")
@@ -56,4 +56,4 @@ async def start_ray_cluster():
 
     except Exception as e:
         logger.error(f'Exception: {e}')
-        return {"status_code":500, "message":f"{e}")
+        return {"status_code":500, "message":f"{e}"}
