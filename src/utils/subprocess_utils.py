@@ -13,7 +13,7 @@ class SubProcess:
         self.logger = Logger(__name__).create_log_file()
 
     async def execute(self, command, success_code, message):
-        self.logger.info(f'command: {' '.join(command)} executing.')
+        self.logger.info(f"command: {' '.join(command)} executing.")
         self.process = await asyncio.create_subprocess_exec(
             *command,
             stdout=asyncio.subprocess.PIPE,
