@@ -11,7 +11,7 @@ class Yaml:
     def load_yaml(self):
         try:
             with open(self.file_name, 'r') as f:
-                self.logger.info(f'Loading the {self.file_name}')
+                self.logger.info(f'Loading the {self.file_name} file')
                 self.data = yaml.safe_load(f)
                 return self.data
 
