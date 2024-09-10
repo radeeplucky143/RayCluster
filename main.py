@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from src.api.endpoints import router
 
 app = FastAPI(title="RayCluster", description="Cluster Automation.")
-app.include_router(router, prefix="/api")
+app.include_router(router, prefix="/rayCluster")
 
 if __name__ == "__main__":
     import uvicorn
