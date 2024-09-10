@@ -1,4 +1,4 @@
-from src.logger_util import Logger
+from src.utils.logger_util import Logger
 from fastapi import HTTPException
 import asyncio
 
